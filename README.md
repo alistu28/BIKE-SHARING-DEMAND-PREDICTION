@@ -47,8 +47,8 @@ Evaluasi  metrik yang akan digunakan adalah RMSE, MAE, dan MAPE.
 Selain itu, jika model yang akan digunakan sebagai **model akhir adalah model linear**, kita dapat menggunakan R-squared atau Adjusted R-squared. Nilai R-squared digunakan untuk mengetahui seberapa baik model dapat merepresentasikan varians keseluruhan data. Semakin mendekati 1, maka semakin fit pula modelnya terhadap data observasi. Namun, metrik ini tidak valid untuk model non-linear.
 
 # Modeling Workflow
-
-Test
+  
+![image](https://drive.google.com/uc?id=1sy42Dn-mR0LxTRW6IyhAQWI_8DmZpWP2)
 
 # Conclusion
 
