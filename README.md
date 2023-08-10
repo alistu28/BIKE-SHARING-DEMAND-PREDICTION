@@ -23,7 +23,47 @@ Selain aplikasi dari perusahaan Capital Bikeshare yang menarik, karakteristik da
 
 **Problem Statement**
 
-Berbagi sepeda (*bike-sharing*) muncul sebagai sarana transportasi alternatif yang secara komprehensif dapat memperbaiki masalah lingkungan, kemacetan lalu lintas, kualitas hidup yang buruk yang disebabkan oleh sistem transportasi yang berorientasi pada mobil, dan dapat menjamin efek praktis. Namun, meskipun banyak keuntungannya, jumlah kota dan bisnis yang enggan memperkenalkan program sepeda bersama semakin meningkat karena kerugian dari biaya tetap yang tinggi seperti biaya pemasangan atau biaya operasional. Dengan demikian, **prediksi permintaan yang akurat diperlukan untuk pengoperasian program bike sharing yang berkelanjutan**.
+Berbagi sepeda (*bike-sharing*) muncul sebagai sarana transportasi alternatif yang secara komprehensif dapat memperbaiki masalah lingkungan, kemacetan lalu lintas, kualitas hidup yang buruk yang disebabkan oleh sistem transportasi yang berorientasi pada mobil, dan dapat menjamin efek praktis. Namun, meskipun banyak keuntungannya, jumlah kota dan bisnis yang enggan memperkenalkan program sepeda bersama semakin meningkat karena kerugian dari biaya tetap yang tinggi seperti biaya pemasangan atau biaya operasional.
+
+*Perhitungan Biaya Operasional*
+
+*Asumsi:*
+
+- *Jumlah Sepeda di Stasiun: 30*
+- *Penggunaan Sepeda Tahunan dari Stasiun: 5.000 perjalanan*
+- *Biaya Pemeliharaan Tahunan per Sepeda: $150* - [*Sumber*](https://www.businessanalystlearnings.com/business-matters/2022/2/3/how-much-does-it-cost-to-implement-a-bike-share-system-in-2022#:~:text=The%20typical%20fees%20for%20bike,the%20total%20amount%20per%20year.) 
+- *Frekuensi Redistribusi (Skenario Distribusi Buruk): 2x/Hari*
+- *Biaya Redistribusi (Truck Fuel for 10-Hour Rest Period): $20* - [*Sumber*](https://afdc.energy.gov/files/u/publication/hdv_idling_2015.pdf)
+
+*Skenario Distribusi Sepeda Buruk (Tim Operasional Tidak Mengetahui Perkiraan Bike Share Demand di Sebuah Stasiun):*
+
+*1. Biaya Pemeliharaan:*
+- *Total Biaya Pemeliharaan Tahunan = Biaya Pemeliharaan Tahunan per Sepeda * Jumlah Sepeda*
+- *Total Biaya Pemeliharaan Tahunan = $150 x 30 = $4,500*
+
+*2. Biaya Redistribusi:*
+- *Total Biaya Redistribusi Tahunan = Frekuensi Redistribusi x Biaya Redistribusi*
+- *Total Biaya Redistribusi Tahunan = (2x/Hari) x (365 Hari/Tahun) x $20 = $14,600*
+
+*3. Biaya Operasinal:*
+- *Total Biaya Operasional = Total Biaya Pemeliharaan Tahunan + Total Biaya Redistribusi Tahunan*
+- *Total Biaya Operasional = $4,500 + $14,600 = $19,100*
+
+*Skenario Distribusi Sepeda Baik (Tim Operasional Mengetahui Perkiraan Bike Share Demand di Sebuah Stasiun):*
+
+*1. Biaya Pemeliharaan:*
+- *Total Biaya Pemeliharaan Tahunan = Biaya Pemeliharaan Tahunan per Sepeda * Jumlah Sepeda*
+- *Total Biaya Pemeliharaan Tahunan = $150 x 30 = $4,500*
+
+*2. Biaya Redistribusi:*
+- *Total Biaya Redistribusi Tahunan = Frekuensi Redistribusi * Biaya Redistribusi*
+- *Total Biaya Redistribusi Tahunan = (1x/Hari) x (365 Hari/Tahun) x $20 = $7,300*
+
+*3. Biaya Operasinal:*
+- *Total Biaya Operasional = Total Biaya Pemeliharaan Tahunan + Total Biaya Redistribusi Tahunan*
+- *Total Biaya Operasional = $4,500 + $7,300 = $11,800*
+
+Dalam contoh perhitungan, biaya operasional untuk skenario distribusi buruk adalah $19.100, sedangkan biaya operasional untuk skenario distribusi baik adalah $11.800. Skenario distribusi yang buruk masih menimbulkan biaya yang lebih tinggi karena redistribusi sepeda yang lebih sering. Dengan demikian, **prediksi permintaan yang akurat diperlukan untuk pengoperasian program bike sharing yang berkelanjutan**.
 
 **Goals**
 
